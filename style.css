@@ -1,0 +1,381 @@
+#loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255); /* Adjust background color with opacity */
+  z-index: 1000;
+  animation: slideOutContainer 1s forwards 5s; /* Slide out container after 5 seconds */
+}
+
+#loading-content {
+  width: 35%;
+  text-align: center;
+  opacity: 1;
+}
+
+#loading-gif {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  animation: fadeInGif 2s forwards; /* Fade in GIF */
+}
+
+@keyframes fadeInGif {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideOutContainer {
+  to {
+      opacity: 0;
+      transform: translateY(100%); /* Slide out container to the bottom */
+  }
+}
+
+.box {
+ 
+  opacity: 0;
+  transform: translateY(50px) scale(1); /* Начальное смещение и масштабирование */
+  transition: opacity 1s, transform 1s; /* Увеличьте продолжительность анимации */
+}
+
+
+.box.visible{
+  opacity: 1;
+  transform: translateY(0) scale(1); /* Завершение анимации с восстановлением масштаба */
+}
+
+
+
+
+body {
+  font-family: 'Amerika Sans', sans-serif;
+  margin-top: 150px;  
+  background-color: rgb(39, 41, 40);
+  color:rgb(255, 255, 255);
+}
+
+.resumeLink, .LinkedInLink {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+table {
+  
+  border-collapse: collapse;
+  width: 70%;
+  border: none; 
+}
+
+th, td {
+  border: none; 
+  text-align: left;
+  padding: 8px;
+}
+
+@font-face {
+  font-family: 'Amerika Sans';
+  src: url('fonts/Amerika.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amerika Sans';
+  src: url('fonts/Amerika.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+header {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 5px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 40vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 30px;
+  border: whitesmoke 1px solid;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+#scrollToTopBtn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-family: 'Amerika Sans', sans-serif;
+}
+
+#scrollToTopBtn:hover {
+  color: #959596; 
+}
+
+
+
+.name {
+  position: relative;
+  text-align: center;
+  margin-top: -5%;
+}
+
+.myName {
+  font-size: 10vw;
+  margin: 0;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 1.5vw; 
+  width: 30%; 
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  text-align: right;
+ 
+}
+
+.right {
+  position: absolute;
+  right: 0;
+ text-align: right;
+ margin-right: 5%;
+}
+
+
+
+.myPicture {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.myPicture img {
+  width: 45%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15vw;
+}
+
+
+.custom-table {
+  width: 70%;
+  margin: 0 5% 0 auto; 
+  border-collapse: collapse;
+}
+
+.column-header, .data-cell {
+  padding: 8px;
+  text-align: left;
+}
+
+.info-2 {
+  margin-top: 150px;
+}
+
+.container1 {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  
+  text-align: center;
+  padding: 20px;
+}
+
+.left-content1 {
+  order: 1; 
+  font-size: 10vw;
+  margin-left: 7%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.right-content1 {
+  order: 2;  
+  margin-right: 7%;
+  font-size: 10vw;
+}
+
+
+/* Style for text alignment within each div */
+.left-content1 p, .right-content1 p {
+  margin: 0;
+}
+
+
+.profWork {
+  font-size: 2vw;
+  margin-left: 20%;
+  margin-top: -10%; 
+}
+
+.grid-container1, .grid-container2, .grid-container3 {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.video-section1, .video-section2, .video-section3{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 10%;
+}
+
+
+
+.videoProject{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.description-section1, .description-section2, .description-section3 {
+  width: 100%;
+} 
+
+.description-text{
+  margin: 10%;
+}
+
+
+
+
+
+
+.moreHeader {
+  text-align: center;
+ 
+  font-size: 10vw;
+}
+            
+.more {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.moreDiv {
+  width: 80%;
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  overflow-x: auto;
+  margin: 0 -8px; /* Negative margin to counteract the margin on .video */
+}
+
+.video {
+  flex: 0 0 auto;
+  margin: 0 8px; /* Adjust margin as needed */
+  max-width: 100%; /* Ensure the video doesn't exceed its natural size */
+}
+
+.container2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  
+  text-align: center;
+  padding: 20px;
+  max-height: max-content;
+}
+
+.left-content2 {
+  order: 1; 
+  font-size: 7vw;
+  margin-left: 7%;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.right-content2 {
+  margin-top: 9%;
+  order: 2;  
+  margin-right: 7%;
+  font-size: 7vw;
+}
+
+.uniqueP {
+  font-size: 1.5vw;
+  margin-left:20%;
+}
+
+
+.divPic {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  width: 80%; /* Set width to 80% */
+  margin: 0 auto; /* Center the element horizontally */ 
+  margin-bottom: 10%;
+}
+
+.picDiv {
+  display: flex;
+  overflow-x: auto;
+  width: 80%; /* Set width to 80% */
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+.hobbyPics {
+  height: 40vw;
+  width: auto;
+  margin: 1%;
+  object-fit: cover;
+  transition: transform 0.5s ease-out;
+}
+
+
+.hobbyPics:hover {
+  transform: scale(1.1);
+  transition-delay: 0.1s;
+}
+
+.email a {
+  color: rgb(255, 255, 255); /* Set the color you want */
+  text-decoration: none; /* Remove underline */
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+
+  margin-top: 2vh;
+  margin-bottom: 10%;
+  height: 15vh;
+}
